@@ -1,0 +1,6 @@
+[submodule "chromium-addon"]
+	path = chromium-addon
+	url = git@github.com:insitu-project/chromium-addon.git
+[submodule "proto-ext"]
+	path = proto-ext
+	url = git@github.com:insitu-project/proto-ext.git
