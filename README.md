@@ -3,12 +3,22 @@
 This project is only useful for a time being, to merge both LMEM extensions
 while allowing to keep on developing each of them separately
 
+## Install
+
+Clone recursively the git project (get all the modules)
+> git clone --recursive git@github.com:insitu-project/merge-extensions.git
+
 ## Running
 
 Just run make with no arguments ( will update, build and merge the extensions locally )
 > make
 
 # Running specifics tasks manually
+
+## Updating
+
+Get the latest master version of the submodules
+> make update
 
 ## Building
 
