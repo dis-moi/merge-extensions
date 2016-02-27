@@ -21,7 +21,7 @@ clean-proto:
 	rm -rf ${PROTO_BUILD_DIR}
 
 update:
-	git pull --recurse-submodules origin master
+	git pull --recurse-submodules origin
 
 build: clean-extensions build-chromium build-proto
 
