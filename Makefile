@@ -36,7 +36,7 @@ build-chromium:
 build-proto:
 	cd ${PROTO_DIR} && npm install && npm run build:extension
 
-merge: clean-build merge-build clean-extensions
+merge: clean-build merge-build
 
 merge-build-dir:
 	mkdir ${MERGE_BUILD_DIR}
