@@ -74,5 +74,5 @@
         "*/main.html",
         "shared/analytics/lib/heap.js"
     ],
-    "content_security_policy": "default-src 'self'; object-src 'self'; script-src 'self' https://heapanalytics.com http://localhost:3000 'unsafe-eval'; connect-src http://localhost:3000 ws://localhost:3000 ws://localhost:35729; style-src * 'unsafe-inline'; img-src 'self' data:;"
+    "content_security_policy": "script-src 'self' https://heapanalytics.com; object-src 'self'"
 }
