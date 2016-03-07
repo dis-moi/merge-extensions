@@ -20,13 +20,8 @@ clean-chromium:
 clean-proto:
 	rm -rf ${PROTO_BUILD_DIR}
 
-update: update-chromium update-proto
-
-update-chromium:
-	cd ${CHROMIUM_DIR} && git checkout master && git pull
-
-update-proto:
-	cd ${PROTO_DIR} && git checkout master && git pull
+update: 
+	git submodule foreach git pull origin master
 
 build: clean-extensions build-chromium build-proto
 
