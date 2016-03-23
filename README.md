@@ -13,6 +13,13 @@ Clone recursively the git project (get all the modules)
 Just run make with no arguments ( will update, build and merge the extensions locally )
 > make
 
+## Deployment
+
+Right now the verion number of the merged extensions doesn't update automatically.
+If you want to publish a new merged extension you'll have to manually edit it in the
+manifest.json file
+
+
 # Running specifics tasks manually
 
 ## Updating
