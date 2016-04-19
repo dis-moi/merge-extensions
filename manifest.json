@@ -1,7 +1,7 @@
 {
     "name": "Le Même en Mieux (merge)",
     "short_name": "LMEM",
-    "version": "0.32.0",
+    "version": "0.32.7",
     "manifest_version": 2,
     "description": "Quand vous consultez un produit, vous êtes alerté des meilleures alternatives. Gratuit et sans pub, respecte votre vie privée.",
     "icons": {
