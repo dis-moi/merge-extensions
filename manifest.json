@@ -1,7 +1,7 @@
 {
-    "name": "Le Même en Mieux (merge)",
+    "name": "Le Même en Mieux",
     "short_name": "LMEM",
-    "version": "0.32.7",
+    "version": "0.33.7",
     "manifest_version": 2,
     "description": "Quand vous consultez un produit, vous êtes alerté des meilleures alternatives. Gratuit et sans pub, respecte votre vie privée.",
     "icons": {
@@ -11,6 +11,7 @@
     },
     "offline_enabled": false,
     "permissions": [
+        "<all_urls>",
         "geolocation",
         "tabs",
         "contextMenus",
@@ -24,11 +25,7 @@
         "https://*/*"
     ],
     "background": {
-      "scripts": [
-          "scripts/commons.js",
-          "scripts/background/background.js",
-          "js/background.bundle.js"
-      ]
+        "page": "background.html"
     },
     "browser_action": {
         "default_icon": {
@@ -40,39 +37,20 @@
     },
     "content_scripts": [{
         "matches": [
-            "*://www.voyages-sncf.com/*",
-            "*://proposition.voyages-sncf.com/*",
-            "*://*.amazon.fr/*",
-            "*://*.amazon.com/*",
-            "*://livre.fnac.com/*",
-            "*://www.blablacar.fr/*",
-            "*://www.placedeslibraires.fr/*",
-            "*://www.booking.com/*",
-            "*://*.hotels.com/*"
+            "*://*/*"
         ],
         "js": [
             "scripts/commons.js",
             "scripts/contentScript/contentScript.js",
             "shared/analytics/lib/heap.js"
         ]
-    },
-		{
-			"matches": [
-				"http://*/*",
-				"https://*/*"
-			],
-			"js": [
-				"/js/inject.bundle.js"
-			],
-			"run_at": "document_end",
-			"all_frames": false
-		}],
+    }],
     "web_accessible_resources": [
+        "*/main.html",
+        "shared/analytics/lib/heap.js",
         "img/*",
         "styles/*",
-        "fonts/*",
-        "*/main.html",
-        "shared/analytics/lib/heap.js"
+        "fonts/*"
     ],
-    "content_security_policy": "script-src 'self' https://heapanalytics.com; object-src 'self'"
+    "content_security_policy": "script-src 'self' https://ui.lmem.net 'unsafe-eval' https://cdn.heapanalytics.com https://heapanalytics.com; object-src 'self'; connect-src http://lmem-craft-backend.cleverapps.io https://ui.lmem.net; style-src 'self' https://ui.lmem.net; img-src 'self' https://ui.lmem.net data:;"
 }
