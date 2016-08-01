@@ -93,4 +93,7 @@ copy-proto:
 copy-manifest:
 	cp manifest.json ${MERGE_BUILD_DIR}
 
-merge-build: merge-build-dir copy-chromium copy-proto copy-manifest
+copy-background:
+	cp background.html ${MERGE_BUILD_DIR}
+
+merge-build: merge-build-dir copy-chromium copy-proto copy-manifest copy-background
