@@ -1,2 +1,4 @@
+package.zip
 build/
 npm-debug.log
+.idea/
