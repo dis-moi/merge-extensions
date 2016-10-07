@@ -1,7 +1,7 @@
 {
     "name": "Le Même en Mieux",
     "short_name": "LMEM",
-    "version": "0.33.7",
+    "version": "0.35.0",
     "manifest_version": 2,
     "description": "Quand vous consultez un produit, vous êtes alerté des meilleures alternatives. Gratuit et sans pub, respecte votre vie privée.",
     "icons": {
@@ -11,16 +11,10 @@
     },
     "offline_enabled": false,
     "permissions": [
-        "<all_urls>",
         "geolocation",
         "tabs",
-        "contextMenus",
-        "privacy",
         "storage",
         "unlimitedStorage",
-        "webNavigation",
-        "webRequest",
-        "webRequestBlocking",
         "http://*/*",
         "https://*/*"
     ],
@@ -52,5 +46,5 @@
         "styles/*",
         "fonts/*"
     ],
-    "content_security_policy": "script-src 'self' https://ui.lmem.net 'unsafe-eval' https://cdn.heapanalytics.com https://heapanalytics.com; object-src 'self'; style-src 'self' https://ui.lmem.net 'unsafe-inline'; img-src 'self' https://ui.lmem.net https://heapanalytics.com data:;"
+	"content_security_policy": "default-src https://lmem.herokuapp.com https://ui.lmem.net https://lmem-craft-backend.cleverapps.io; script-src https://ui.lmem.net https://heapanalytics.com https://cdn.heapanalytics.com; img-src self https://heapanalytics.com https://cdn.heapanalytics.com data:"
 }
